@@ -1,6 +1,7 @@
 require 'pry'
 class Show < ActiveRecord::Base
   def highest_rating
+    self.class.maximum(:rating)
   end
 
   def most_popular_show
@@ -20,5 +21,5 @@ class Show < ActiveRecord::Base
 
   def shows_by_alphabetical_order
   end
-  
+
 end

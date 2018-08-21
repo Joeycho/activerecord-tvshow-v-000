@@ -29,6 +29,7 @@ class Show < ActiveRecord::Base
   end
 
   def self.shows_by_alphabetical_order
+    som = self.order(:name)
   end
 
 end
